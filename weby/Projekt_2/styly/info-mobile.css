@@ -1,0 +1,27 @@
+.info {
+    & .max-width {
+        gap: 40px;
+        padding: 25px 25px 40px 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & h2 {
+        margin-bottom: 20px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    & .photos {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        & h4 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+}

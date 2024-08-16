@@ -1,0 +1,126 @@
+@media (width > 890px) {
+    .hero {
+        padding: 50px 0;
+
+        & h1 {
+            font-size: 5rem;
+            margin-bottom: 50px;
+        }
+
+        & .block {
+            display: flex;
+            align-items: center;
+            width: clamp(800px, 90vw, 1500px);
+            margin: 0 auto;
+
+            & .left {
+                flex: 1;
+                display: block;
+
+                .box {
+                    height: 450px;
+                    width: 400px;
+                    margin: 0 auto;
+                    border-radius: 50px;
+                    box-shadow: inset 5px 5px 8px var(--hero-svg-box-shadow1),
+                        inset -5px -5px 8px var(--hero-svg-box-shadow2);
+
+                    & svg {
+                        height: 450px;
+                        width: 400px;
+                        filter: drop-shadow(15px 20px 0px #00000018);
+
+                        & .svg-color1 {
+                            stop-color: var(--hero-svg-color1);
+                        }
+
+                        & .svg-color2 {
+                            stop-color: var(--hero-svg-color2);
+                        }
+                    }
+                }
+            }
+
+            & .right {
+                flex: 1;
+
+            }
+
+        }
+
+        & p {
+            max-width: 60ch;
+            font-size: 2rem;
+            margin: 0 auto;
+
+        }
+    }
+
+    #o-mne {
+        max-width: 100ch;
+        margin: 0 auto;
+
+        & div {
+            text-align: justify;
+        }
+
+        & pre {
+            float: right;
+            margin: 10px 0 0 15px;
+        }
+    }
+
+
+    #portfolio {
+        clear: both;
+
+        & h2 {
+            margin-bottom: 30px;
+        }
+
+        & .cards {
+            flex-direction: row;
+            gap: 40px;
+            justify-content: center;
+            width: clamp(0px, 80vw, 2000px);
+            margin: 0 auto;
+            margin-bottom: 40px;
+
+            &:has(.card:hover) .card:not(:hover) {
+                filter: blur(2px) brightness(80%);
+                transform: scale(.9);
+            }
+
+            & .card {
+                transition: transform .5s, filter .5s;
+            }
+
+            & .card:hover {
+                transform: scale(1.05);
+
+                & img {
+                    border: 2px solid var(--card-hover-border-color);
+                }
+            }
+        }
+    }
+
+    #kontakt {
+        margin: 0 auto 25px auto;
+        width: max-content;
+
+        & .link {
+            margin-bottom: 10px;
+
+            & svg {
+                height: 30px;
+            }
+
+            & a {
+                font-size: 20px;
+            }
+        }
+
+
+    }
+}

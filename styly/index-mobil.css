@@ -1,0 +1,131 @@
+body {
+    background-image: var(--background-image);
+}
+
+
+
+
+.hero {
+    padding: 25px 25px;
+    text-align: center;
+    transition: margin 1s;
+
+    & h1 {
+        margin-bottom: 15px;
+    }
+
+    & .block {
+        & .left {
+            display: none;
+        }
+    }
+
+}
+
+#o-mne {
+    margin: 0 25px 25px 25px;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    & p {
+        margin-bottom: 15px;
+
+        & a {
+            text-decoration: underline;
+        }
+    }
+
+    & pre {
+        width: min-content;
+        border-radius: 15px;
+        margin: 15px 0;
+        background-color: rgba(0, 0, 0, 0.459);
+        padding: 10px;
+        color: white;
+
+        & code * {
+            filter: drop-shadow(0px 0px 2px black);
+        }
+
+        & .keyword {
+            color: var(--keyword);
+        }
+
+        & .text {
+            color: rgb(88, 250, 250);
+        }
+
+        & .string {
+            color: rgb(255, 137, 52);
+        }
+
+        & .keyword-control {
+            color: rgb(217, 142, 255);
+        }
+
+        & .function {
+            color: yellow;
+        }
+    }
+
+}
+
+#portfolio {
+    margin: 0 25px;
+
+    & h2 {
+        margin-block: 25px;
+        text-align: center;
+    }
+
+    & .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 20px;
+
+        & .card {
+
+
+            & img {
+                max-width: 90vw;
+                border-radius: 30px;
+            }
+
+            & a {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+
+        }
+    }
+}
+
+#kontakt {
+    margin: 10px 25px 30px 25px;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    & .link {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        & svg {
+            height: 30px;
+        }
+
+        & a {
+            text-decoration: underline;
+        }
+    }
+}
