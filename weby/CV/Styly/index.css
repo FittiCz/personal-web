@@ -1,0 +1,275 @@
+body {
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#53535c 1.25px, #e5e5f7 1.25px);
+    background-size: 25px 25px;
+    padding: 40px 0;
+}
+
+main {
+    display: flex;
+    position: relative;
+    background-color: white;
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    padding: 0;
+}
+
+aside {
+    background-color: #393939;
+    width: 40%;
+    height: 100%;
+    padding: 20px 30px;
+
+    & h2 {
+        margin-bottom: 15px;
+    }
+
+    & section {
+        margin-bottom: 25px;
+    }
+
+    & h1 {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: xx-large;
+    }
+
+    .o-mne {
+        & p {
+            text-wrap: pretty;
+        }
+    }
+
+    .kontakt {
+
+        &>div {
+            display: flex;
+            align-items: center;
+
+            a {
+                text-decoration: underline;
+                padding: 5px 10px;
+                border-radius: 25px;
+                margin-left: 5px;
+
+                &:hover {
+                    background-color: #04aa6d;
+                    color: black !important;
+                }
+            }
+        }
+    }
+
+    .jazyky {
+
+        & .cestina {
+            display: flex;
+            gap: 5px;
+
+            & span {
+                margin-right: auto;
+            }
+
+            & .box-symbol {
+                width: 12px;
+                height: 12px;
+                background-color: transparent;
+                border: 2px solid var(--icon-color);
+                display: inline-block;
+                transform: skewX(-25deg);
+            }
+
+            & .box-symbol:nth-child(-n + 5) {
+                background-color: var(--icon-color);
+                border: none;
+            }
+        }
+
+        & .anglictina {
+            display: flex;
+            gap: 5px;
+
+            & span {
+                margin-right: auto;
+            }
+        }
+
+        & .box-symbol {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            background-color: transparent;
+            border: 2px solid var(--icon-color);
+            transform: skewX(-25deg);
+        }
+
+        & .anglictina .box-symbol:first-of-type {
+            background-color: var(--icon-color);
+            border: none;
+        }
+    }
+
+    .zaliby {
+
+        & span {
+            padding: 5px;
+            background-color: var(--icon-color);
+            color: black;
+            line-height: 2.5;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+    }
+}
+
+.content {
+    color: var(--text-color-dark);
+    padding: 40px 40px 0 40px;
+    /* position: relative; */
+
+    & h2 {
+        margin-bottom: 15px;
+    }
+
+    & .odrazka {
+        display: list-item;
+        list-style-type: square;
+        margin-left: 35px;
+    }
+
+    & p {
+        margin-bottom: 10px;
+    }
+
+    & section {
+        margin-bottom: 35px;
+    }
+
+    & .vzdelani {
+        & .skola {
+            margin-bottom: 25px;
+        }
+
+        & p {
+            margin-bottom: 10px;
+        }
+    }
+
+    & .dovednosti {
+
+        & .bars {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &>div {
+                --bar-width: 0%;
+                width: 200px;
+                height: 20px;
+                background-color: #ccc;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    background-color: var(--text-color-dark);
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    animation: bar-animation 1s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%) 1s 1 forwards;
+                }
+            }
+
+            & #html {
+                --bar-width: 90%;
+            }
+
+            & #CSS {
+                --bar-width: 80%;
+            }
+
+            & #JS {
+                --bar-width: 50%;
+            }
+
+            #React {
+                --bar-width: 10%
+            }
+
+            #Figma {
+                --bar-width: 10%
+            }
+        }
+    }
+
+    .qr-code {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        border: 5px solid rgb(0, 0, 0);
+        border-radius: 15px;
+        overflow: hidden;
+        background: black;
+
+        & .qr-image {
+            width: 160px;
+            padding: 5px;
+
+            & img {
+                border-radius: 10px;
+            }
+        }
+
+        & .text {
+            text-align: center;
+            padding: 10px 0;
+            color: white;
+            letter-spacing: 1px;
+            font-weight: bold;
+
+
+        }
+    }
+}
+
+
+@media print {
+    @page {
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        background: none;
+        -webkit-print-color-adjust: exact;
+        /* Chrome, Safari */
+        color-adjust: exact;
+        /* Firefox */
+        background-color: #fff;
+        /* Fallback for older browsers */
+    }
+
+    main {
+        max-height: 100vh;
+    }
+
+    .bars {
+        &>div::before {
+            animation: none;
+            width: var(--bar-width);
+        }
+    }
+}
+
+@keyframes bar-animation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--bar-width);
+    }
+}

@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Diavlo;
+    src: url("../Font/Diavlo/DiavloMedium-Regular.woff");
+}
+
+:root {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    --text-color: #38C27F;
+    --text-color-dark: #21734b;
+    --icon-color: #1fdb80;
+}
+
+body {
+    font-size: initial;
+    font-family: Diavlo;
+    color: var(--text-color);
+
+    & svg {
+        fill: var(--icon-color);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:visited,
+:any-link {
+    color: var(--text-color) !important;
+}
